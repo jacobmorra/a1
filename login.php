@@ -25,8 +25,8 @@ if (isset($_POST["submit"]) && !empty($_POST["unm"]) && !empty($_POST["ups"])){
 	//$dbLocalhost = mysql_connect("localhost:3306", "root", "")
 	//		or die("Could not connect: " . mysql_error());
 	
-	mysql_select_db("shopCartUsers", $dbLocalhost)
-			or die ("Could not find database: " . mysql_error());
+	//mysql_select_db("shopCartUsers", $dbLocalhost)
+	//		or die ("Could not find database: " . mysql_error());
 			
 	try{
 		$command = "SELECT username, password FROM userinfo WHERE 
