@@ -9,7 +9,7 @@ if (!isset($_SESSION['username'])){
 //if user is logged into a session, give them full access
 else{
 	echo "YAYAYA";
-	//include 'frontuser.php';
+	include 'frontuser.php';
 
 	//echo file_get_contents("frontuser.php");
 }
