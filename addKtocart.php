@@ -49,7 +49,7 @@ echo $currkit;
 $mysqli2 = new mysqli("localhost", "phpmyadmin", "embedded", "phpmyadmin");
 
 //update table with correct number of items
-//$cartupdate = "UPDATE usercart SET num2 = $currkit WHERE userid = '$_COOKIE[userid]'");
+$query2 = "UPDATE usercart SET num2 = $currkit WHERE userid = '$_COOKIE[userid]'";
 
 /*
 if ($mysqli->query($cartupdate) === TRUE) {
