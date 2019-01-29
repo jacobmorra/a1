@@ -20,19 +20,22 @@
 session_start();
 
 if (isset($_POST["submit"]) && !empty($_POST["unm"]) && !empty($_POST["ups"])){
-	$dbLocalhost = mysql_connect("localhost:3306", "root", "")
-			or die("Could not connect: " . mysql_error());
+	$mysqli = new mysqli("localhost", "phpmyadmin", "embedded", "phpmyadmin");
+	
+	//$dbLocalhost = mysql_connect("localhost:3306", "root", "")
+	//		or die("Could not connect: " . mysql_error());
 	
 	mysql_select_db("shopCartUsers", $dbLocalhost)
 			or die ("Could not find database: " . mysql_error());
 			
 	try{
-		$sql = mysql_query("SELECT username, password FROM userinfo WHERE 
-			username='$_POST[unm]' AND password='$_POST[ups]'")
-			or die("Could not find user: " . mysql_error());
+		$command = "SELECT username, password FROM userinfo WHERE 
+			username='$_POST[unm]' AND password='$_POST[ups]'";
+			//or die("Could not find user: " . mysql_error());
 		
-		$userfetch = mysql_fetch_row($sql)
-			or die("Could not find user. " . mysql_error());
+		$result = $mysqli->query($command)
+		$userfetch = mysqli_fetch_row($result)
+		//	or die("Could not find user. " . mysql_error());
 			
 		$_SESSION['username'] = $userfetch[0];
 		$_SESSION['userpass'] = $userfetch[1];
