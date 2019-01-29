@@ -69,7 +69,7 @@ else {
   <div class="row">
     <div class="col-sm-4">
 		<h3>Ultimate Twix!</h3>
-		<img class="img-thumbnail" width="304" height="236" src = "http://www.chocolate-brands.com/image/cache/data/Mars/mars-twix-display-500x500.jpg">
+		<img class="img-thumbnail" width="304" height="236" src = "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiC3baozJPgAhVH5YMKHT9bDH0QjRx6BAgBEAU&url=https%3A%2F%2Fwww.walgreens.com%2Fstore%2Fc%2Ftwix-caramel-minis-size-chocolate-cookie-bar-candy-bag%2FID%3Dprod6381251-product&psig=AOvVaw0znywPHzB05VFn8DkvLSef&ust=1548872075364581">
 		<p class="well">Price: $4.99/ea </p>
 		
 		<div style="width:100%">
@@ -89,7 +89,7 @@ else {
     </div>
     <div class="col-sm-4">
 		<h3>Kit Kat Chunky!</h3>
-		<img class="img-thumbnail" width="304" height="236" src = "http://thumbs1.ebaystatic.com/d/l225/m/mZs9BTHDJ3Nn5aP1UOBGIcA.jpg">
+		<img class="img-thumbnail" width="304" height="236" src = "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjV75KUy5PgAhUC84MKHeK6AlUQjRx6BAgBEAU&url=https%3A%2F%2Fwww.madewithnestle.ca%2Fkit-kat%2Fkit-kat-chunky-0&psig=AOvVaw21YVFMqaaelhL2ztObSxUl&ust=1548871668870445">
 		<p class="well">Price: $3.99/ea </p>
 		
 		<div style="width:100%">
