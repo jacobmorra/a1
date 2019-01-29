@@ -30,7 +30,7 @@ if ($result = $mysqli->query($selectCart)) {
 echo "TEST";	
 echo $numkit;
 echo "END TEST";
-/*
+
 
 //create KitKat object for use of methods for adding, setting, getting
 $kitkat = new KitKat();
@@ -53,7 +53,7 @@ if ($mysqli->query($cartupdate) === TRUE) {
 			echo "Error: " . $sql . "<br>" . $conn->error;
 		}
 		
-*/
+
 ?>
 
 <!DOCTYPE html>
