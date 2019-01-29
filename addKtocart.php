@@ -47,7 +47,7 @@ $cost = $kitkat->getCost();
 echo $currkit;
 
 //update table with correct number of items
-$cartupdate = "UPDATE usercart SET num2 = $currkit")
+$cartupdate = "UPDATE usercart SET num2 = '$currkit'")
 
 /*
 if ($mysqli->query($cartupdate) === TRUE) {
