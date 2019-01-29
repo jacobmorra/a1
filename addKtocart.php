@@ -2,6 +2,7 @@
 <?php
 require_once "Item.php";
 session_start();
+echo "TEST TEST TEST";
 //twix 1, kit 2, mars 3
 
 //connect to database (only connects if $_COOKIE['userid'] matches table entry)
