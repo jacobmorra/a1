@@ -28,10 +28,19 @@ if (isset($_POST["submit"]) && !empty($_POST["unm"]) && !empty($_POST["ups"])){
 	//mysql_select_db("shopCartUsers", $dbLocalhost)
 	//		or die ("Could not find database: " . mysql_error());	
 	try{
-		$command = "SELECT username, password FROM userinfo WHERE 
+		$query = "SELECT username, password FROM userinfo WHERE 
 			username='$_POST[unm]' AND password='$_POST[ups]'";
-			//or die("Could not find user: " . mysql_error());
 		
+		if ($result = $mysqli->query($query)) {
+
+		/* fetch object array */
+		while ($row = $result->fetch_row()) {
+			printf ("%s (%s)\n", $row[0], $row[1]);
+		}
+
+		/* free result set */
+		$result->close();
+		}
 		//$result = $mysqli->query($command)
 		/*$userfetch = mysqli_fetch_row($result)
 		//	or die("Could not find user. " . mysql_error());
