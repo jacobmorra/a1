@@ -21,9 +21,9 @@ if ($result = $mysqli->query($query)) {
 //otherwise if the user cookie isn't already in the database 
 else {
     echo 'Available';
-	$insertRec = "INSERT INTO usercart (userid) VALUES ('$_COOKIE[userid]')";
+	//$insertRec = "INSERT INTO usercart (userid) VALUES ('$_COOKIE[userid]')";
 			
-	$mysqli->query($insertRec)
+	//$mysqli->query($insertRec)
 }
 ?>
 <!DOCTYPE html>
