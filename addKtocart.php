@@ -31,11 +31,12 @@ echo "TEST";
 echo $numkit;
 echo "END TEST";
 
-/*
+
 //create KitKat object for use of methods for adding, setting, getting
 $kitkat = new KitKat();
 
 //after importing table data, set kitkat object with correct current number
+/*
 $kitkat->setItemNum($numkit);
 $kitkat->addItemNum(1);
 
@@ -54,7 +55,7 @@ if ($mysqli->query($cartupdate) === TRUE) {
 			echo "Error: " . $sql . "<br>" . $conn->error;
 		}
 		
-
+*/
 ?>
 
 <!DOCTYPE html>
