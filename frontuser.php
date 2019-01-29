@@ -9,24 +9,19 @@ echo MD5($_SESSION["username"]);
 echo "<br>";
 echo $_COOKIE["userid"];
 */
-$dbLocalhost = mysql_connect("localhost:3306", "root", "")
-	or die("Could not connect: " . mysql_error());
-		
-mysql_select_db("shopCartUsers", $dbLocalhost)
-	or die ("Could not find database: " . mysql_error());
+$mysqli = new mysqli("localhost", "phpmyadmin", "embedded", "phpmyadmin");
+	
+$query = "SELECT 1 FROM usercart WHERE userid='$_COOKIE[userid]' LIMIT 1";
 
-$result = mysql_query("SELECT 1 FROM usercart WHERE userid='$_COOKIE[userid]' LIMIT 1");
-//if the user cookie is already in the database
-if (mysql_fetch_row($result)) {
-    //echo 'Assigned';
+if ($result = $mysqli->query($query)) {
+	echo 'Assigned';
 } 
 //otherwise if the user cookie isn't already in the database 
 else {
     //echo 'Available';
 	$insertRec = "INSERT INTO usercart (userid) VALUES ('$_COOKIE[userid]')";
 			
-	mysql_query($insertRec, $dbLocalhost)
-	or die("Could not insert user: " . mysql_error());
+	$mysqli->query($insertRec)
 }
 ?>
 <!DOCTYPE html>
