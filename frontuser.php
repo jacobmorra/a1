@@ -20,8 +20,22 @@ $insertRec = "INSERT INTO usercart (userid) VALUES ('$_COOKIE[userid]')";
 
 echo $_COOKIE["userid"];
 
-$mysqli->query($insertRec)
+try{
+		$query = "INSERT INTO usercart (userid) VALUES ('$_COOKIE[userid]')";
+		
+		if ($result = $mysqli->query($query)) {
 
+		echo "SUCCESS!";
+
+		/* free result set */
+		$result->close();
+		}
+	}
+	catch(Exception $e)
+    {
+        /*** if we are here, something has gone wrong with the database ***/
+        $message = 'We are unable to process your request. Please try again later"';
+    }
 /*
 if ($result = $mysqli->query($query)) {
 	echo 'Assigned';
