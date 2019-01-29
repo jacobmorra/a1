@@ -13,18 +13,25 @@ echo $_COOKIE["userid"];
 
 $mysqli = new mysqli("localhost", "phpmyadmin", "embedded", "phpmyadmin");
 	
-$query = "SELECT 1 FROM usercart WHERE userid='$_COOKIE[userid]' LIMIT 1";
+//$query = "SELECT 1 FROM usercart WHERE userid='$_COOKIE[userid]' LIMIT 1";
 
+echo 'Available';
+$insertRec = "INSERT INTO usercart (userid) VALUES ('$_COOKIE[userid]')";
+			
+$mysqli->query($insertRec)
+
+/*
 if ($result = $mysqli->query($query)) {
 	echo 'Assigned';
 } 
 //otherwise if the user cookie isn't already in the database 
 else {
     echo 'Available';
-	//$insertRec = "INSERT INTO usercart (userid) VALUES ('$_COOKIE[userid]')";
+	$insertRec = "INSERT INTO usercart (userid) VALUES ('$_COOKIE[userid]')";
 			
-	//$mysqli->query($insertRec)
+	$mysqli->query($insertRec)
 }
+*/
 ?>
 <!DOCTYPE html>
 <html>
