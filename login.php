@@ -34,6 +34,7 @@ if (isset($_POST["submit"]) && !empty($_POST["unm"]) && !empty($_POST["ups"])){
 			//or die("Could not find user: " . mysql_error());
 		
 		$result = $mysqli->query($command)
+		/*
 		$userfetch = mysqli_fetch_row($result)
 		//	or die("Could not find user. " . mysql_error());
 			
@@ -49,7 +50,7 @@ if (isset($_POST["submit"]) && !empty($_POST["unm"]) && !empty($_POST["ups"])){
 		//************************************************************************
 		//$message = "You have successfully logged in. Welcome, " . $userfetch[0] . "!";
 		header("Location: frontpage.php");
-		
+		*/
 	}
 	catch(Exception $e)
     {
