@@ -10,7 +10,7 @@ echo $_COOKIE["userid"];
 $mysqli = new mysqli("localhost", "phpmyadmin", "embedded", "phpmyadmin");
 
 //select row corresponding to user token in cookie
-$selectCart = "SELECT userid, numtwix, numkit, nummars FROM usercart WHERE userid='$_COOKIE[userid]'";
+$selectCart = "SELECT userid, num1, num2, num3 FROM usercart WHERE userid='$_COOKIE[userid]'";
 	
 //fetch entire row		
 if ($result = $mysqli->query($selectCart)) {
@@ -27,10 +27,9 @@ if ($result = $mysqli->query($selectCart)) {
 	$result->close();
 }
 
-echo "TEST";
+echo "TEST";	
 echo $numkit;
-
-echo "ENDTEST";
+echo "END TEST";
 /*
 
 //create KitKat object for use of methods for adding, setting, getting
