@@ -36,7 +36,7 @@ echo "END TEST";
 $kitkat = new KitKat();
 
 //after importing table data, set kitkat object with correct current number
-/*
+
 $kitkat->setItemNum($numkit);
 $kitkat->addItemNum(1);
 
@@ -44,6 +44,7 @@ $currkit= $kitkat->getItemNum();
 //get total cost 
 $cost = $kitkat->getCost();
 
+/*
 //update table with correct number of items
 $cartupdate = "UPDATE usercart SET numkit = $currkit WHERE userid='$_COOKIE[userid]'")
 */
