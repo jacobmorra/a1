@@ -33,11 +33,15 @@ if (isset($_POST["submit"]) && !empty($_POST["unm"]) && !empty($_POST["ups"])){
 		
 		if ($result = $mysqli->query($query)) {
 
-			/* fetch object array */
-			$row = $result->fetch_row() {
+		/* fetch object array */
+		while ($row = $result->fetch_row()) {
+			$_SESSION['username'] = $row[0];
+			$_SESSION['userpass'] = $row[1];
+			printf ("%s (%s)\n", $row[0], $row[1]);
+		}
 
-			/* free result set */
-			$result->close();
+		/* free result set */
+		$result->close();
 		}
 		//$result = $mysqli->query($command)
 		/*$userfetch = mysqli_fetch_row($result)
