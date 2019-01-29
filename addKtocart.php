@@ -25,7 +25,7 @@ if ($result = $mysqli->query($query)) {
 	$result->close();
 }
 	
-
+/*
 
 //create KitKat object for use of methods for adding, setting, getting
 $kitkat = new KitKat();
@@ -47,6 +47,8 @@ if ($mysqli->query($cartupdate) === TRUE) {
 		else {
 			echo "Error: " . $sql . "<br>" . $conn->error;
 		}
+		
+*/
 ?>
 
 <!DOCTYPE html>
