@@ -51,15 +51,14 @@ $mysqli2 = new mysqli("localhost", "phpmyadmin", "embedded", "phpmyadmin");
 //update table with correct number of items
 $query2 = "UPDATE usercart SET num2 = $currkit WHERE userid = '$_COOKIE[userid]'";
 
-/*
-if ($mysqli->query($cartupdate) === TRUE) {
-			echo "New record created successfully";
-		} 
-		else {
-			echo "Error: " . $sql . "<br>" . $conn->error;
-		}
-	
-*/	
+if ($mysqli2->query($query2) === TRUE) 
+{
+	echo "New record created successfully";
+} 
+else 
+{
+	echo "Error: " . $sql . "<br>" . $conn->error;
+}
 ?>
 
 <!DOCTYPE html>
