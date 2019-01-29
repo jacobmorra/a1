@@ -46,6 +46,7 @@ $cost = $kitkat->getCost();
 //update table with correct number of items
 $cartupdate = "UPDATE usercart SET numkit = $currkit WHERE userid='$_COOKIE[userid]'")
 
+/*
 if ($mysqli->query($cartupdate) === TRUE) {
 			echo "New record created successfully";
 		} 
@@ -54,6 +55,7 @@ if ($mysqli->query($cartupdate) === TRUE) {
 		}
 		
 
+*/
 ?>
 
 <!DOCTYPE html>
