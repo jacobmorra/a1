@@ -26,9 +26,11 @@ if ($result = $mysqli->query($selectCart)) {
 	/* free result set */
 	$result->close();
 }
-	
+
+echo "TEST";
 echo $numkit;
 
+echo "ENDTEST";
 /*
 
 //create KitKat object for use of methods for adding, setting, getting
