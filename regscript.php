@@ -18,15 +18,18 @@ session_start();
 
 <?php
 	if (isset($_POST["submit"]) && !empty($_POST["uname"]) && !empty($_POST["upass"]) && !empty($_POST["umail"])){
+		echo "cant connect to phpmyadmin</h3>";
 		$dbLocalhost = mysql_connect("localhost:3306", "phpmyadmin", "embedded")
 				or die("Could not connect: " . mysql_error());
 		
+		echo "cant connect to db</h3>";
 		mysql_select_db("phpmyadmin", $dbLocalhost)
 				or die ("Could not find database: " . mysql_error());
 
 		$insertRec = "INSERT INTO userinfo (username, password, email) 
 			VALUES ('$_POST[uname]', '$_POST[upass]', '$_POST[umail]')";
 			
+		echo "cant insert record</h3>";	
 		mysql_query($insertRec, $dbLocalhost)
 			or die("Could not insert user: " . mysql_error());
 		
