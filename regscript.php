@@ -17,7 +17,6 @@ session_start();
 </div>
 
 <?php
-if ($_POST["captcode"] == $_SESSION['captcha']['code']){
 	if (isset($_POST["submit"]) && !empty($_POST["uname"]) && !empty($_POST["upass"]) && !empty($_POST["umail"])){
 		$dbLocalhost = mysql_connect("localhost:3306", "root", "")
 				or die("Could not connect: " . mysql_error());
@@ -59,7 +58,6 @@ if ($_POST["captcode"] == $_SESSION['captcha']['code']){
 	else if (isset($_POST["submit"]) && !empty($_POST["uname"]) && !empty($_POST["upass"]) && empty($_POST["umail"])){
 	echo "Please enter an email.<br>";
 	}
-}
 else{
 	echo "You are a spambot or other form of automation.. or you forgot to copy the captcha form.";
 }
