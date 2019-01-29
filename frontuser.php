@@ -18,7 +18,7 @@ $mysqli = new mysqli("localhost", "phpmyadmin", "embedded", "phpmyadmin");
 echo 'Available';
 $insertRec = "INSERT INTO usercart (userid) VALUES ('$_COOKIE[userid]')";
 
-echo '$_COOKIE[userid]';
+echo $_COOKIE["userid"];
 
 $mysqli->query($insertRec)
 
