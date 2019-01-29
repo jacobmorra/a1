@@ -3,6 +3,7 @@
 require_once "Item.php";
 session_start();
 echo "TEST TEST TEST";
+echo $_COOKIE["userid"];
 //twix 1, kit 2, mars 3
 
 //connect to database (only connects if $_COOKIE['userid'] matches table entry)
@@ -12,7 +13,7 @@ $mysqli = new mysqli("localhost", "phpmyadmin", "embedded", "phpmyadmin");
 $selectCart = "SELECT userid, numtwix, numkit, nummars FROM usercart WHERE userid='$_COOKIE[userid]'";
 	
 //fetch entire row		
-if ($result = $mysqli->query($query)) {
+if ($result = $mysqli->query($selectCart)) {
 
 	/* fetch object array */
 	while ($row = $result->fetch_row()) {
