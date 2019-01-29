@@ -26,16 +26,14 @@ if (isset($_POST["submit"]) && !empty($_POST["unm"]) && !empty($_POST["ups"])){
 	//		or die("Could not connect: " . mysql_error());
 	
 	//mysql_select_db("shopCartUsers", $dbLocalhost)
-	//		or die ("Could not find database: " . mysql_error());
-			
+	//		or die ("Could not find database: " . mysql_error());	
 	try{
 		$command = "SELECT username, password FROM userinfo WHERE 
 			username='$_POST[unm]' AND password='$_POST[ups]'";
 			//or die("Could not find user: " . mysql_error());
 		
-		$result = $mysqli->query($command)
-		/*
-		$userfetch = mysqli_fetch_row($result)
+		//$result = $mysqli->query($command)
+		/*$userfetch = mysqli_fetch_row($result)
 		//	or die("Could not find user. " . mysql_error());
 			
 		$_SESSION['username'] = $userfetch[0];
@@ -57,6 +55,7 @@ if (isset($_POST["submit"]) && !empty($_POST["unm"]) && !empty($_POST["ups"])){
         /*** if we are here, something has gone wrong with the database ***/
         $message = 'We are unable to process your request. Please try again later"';
     }
+
 }
 else{
 	$message =  "Login failure.";
