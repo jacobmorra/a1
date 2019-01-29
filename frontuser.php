@@ -16,26 +16,16 @@ $mysqli = new mysqli("localhost", "phpmyadmin", "embedded", "phpmyadmin");
 //$query = "SELECT 1 FROM usercart WHERE userid='$_COOKIE[userid]' LIMIT 1";
 
 echo 'Available';
-$insertRec = "INSERT INTO usercart (userid) VALUES ('$_COOKIE[userid]')";
+$insertRec = "INSERT INTO usercart (userid) VALUES ('$_COOKIE["userid"]')";
 
-$cookid = $_COOKIE["userid"];
+echo $_COOKIE["userid"];
 
-try{
-		$query = "INSERT INTO usercart VALUES ($cookid)";
-		
-		if ($result = $mysqli->query($query)) {
-
-		echo "SUCCESS!";
-
-		/* free result set */
-		$result->close();
+if ($mysqli->query($insertRec) === TRUE) {
+			echo "New record created successfully";
+		} 
+		else {
+			echo "Error: " . $sql . "<br>" . $conn->error;
 		}
-	}
-	catch(Exception $e)
-    {
-        /*** if we are here, something has gone wrong with the database ***/
-        $message = 'We are unable to process your request. Please try again later"';
-    }
 /*
 if ($result = $mysqli->query($query)) {
 	echo 'Assigned';
