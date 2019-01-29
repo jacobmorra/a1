@@ -18,10 +18,10 @@ $mysqli = new mysqli("localhost", "phpmyadmin", "embedded", "phpmyadmin");
 echo 'Available';
 $insertRec = "INSERT INTO usercart (userid) VALUES ('$_COOKIE[userid]')";
 
-echo $_COOKIE["userid"];
+$cookid = $_COOKIE["userid"];
 
 try{
-		$query = "INSERT INTO usercart (userid) VALUES ('$_COOKIE[userid]')";
+		$query = "INSERT INTO usercart VALUES ($cookid)";
 		
 		if ($result = $mysqli->query($query)) {
 
