@@ -19,8 +19,9 @@ session_start();
 <?php
 	if (isset($_POST["submit"]) && !empty($_POST["uname"]) && !empty($_POST["upass"]) && !empty($_POST["umail"])){
 		echo "cant connect to phpmyadmin</h3>";
-		$dbLocalhost = mysql_connect("13.59.242.162:3306", "phpmyadmin", "embedded")
-				or die("Could not connect: " . mysql_error());
+		$mysqli = new mysqli("localhost", "phpmyadmin", "embedded", "phpmyadmin");
+		//$dbLocalhost = mysql_connect("13.59.242.162:3306", "phpmyadmin@localhost", "embedded")
+		//		or die("Could not connect: " . mysql_error());
 		
 		echo "cant connect to db</h3>";
 		mysql_select_db("phpmyadmin", $dbLocalhost)
