@@ -25,6 +25,8 @@ if ($result = $mysqli->query($query)) {
 	$result->close();
 }
 	
+echo $numkit;
+
 /*
 
 //create KitKat object for use of methods for adding, setting, getting
