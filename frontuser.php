@@ -2,6 +2,7 @@
 	..this is why I have omitted "session_start()" from the code.        -->
 
 <?php
+
 //error-testing: check MD5 value of username with cookie value of past user
 /*echo $_SESSION["username"];
 echo "<br>";
@@ -9,6 +10,7 @@ echo MD5($_SESSION["username"]);
 echo "<br>";
 echo $_COOKIE["userid"];
 */
+/*
 $mysqli = new mysqli("localhost", "phpmyadmin", "embedded", "phpmyadmin");
 	
 $query = "SELECT 1 FROM usercart WHERE userid='$_COOKIE[userid]' LIMIT 1";
@@ -23,6 +25,7 @@ else {
 			
 	$mysqli->query($insertRec)
 }
+*/
 ?>
 <!DOCTYPE html>
 <html>
