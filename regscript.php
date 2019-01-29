@@ -18,10 +18,10 @@ session_start();
 
 <?php
 	if (isset($_POST["submit"]) && !empty($_POST["uname"]) && !empty($_POST["upass"]) && !empty($_POST["umail"])){
-		$dbLocalhost = mysql_connect("localhost:3306", "root", "")
+		$dbLocalhost = mysql_connect("localhost:3306", "phpmyadmin", "embedded")
 				or die("Could not connect: " . mysql_error());
 		
-		mysql_select_db("shopCartUsers", $dbLocalhost)
+		mysql_select_db("phpmyadmin", $dbLocalhost)
 				or die ("Could not find database: " . mysql_error());
 
 		$insertRec = "INSERT INTO userinfo (username, password, email) 
