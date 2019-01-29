@@ -31,10 +31,14 @@ session_start();
 			VALUES ('$_POST[uname]', '$_POST[upass]', '$_POST[umail]')";
 			
 		echo "cant insert record</h3>";	
-		mysqli_query($insertRec, $dbLocalhost)
+		if ($mysqli->query($insertRec) === TRUE) {
+			echo "New record created successfully";
+		} 
+		else {
+			echo "Error: " . $sql . "<br>" . $conn->error;
+		}
+		//mysqli_query($mysqli, $insertRec)
 		//	or die("Could not insert user: " . mysql_error());
-		
-		echo "<h3>Welcome to our site, '$_POST[uname]'!</h3>";
 	}
 	else if (isset($_POST["submit"]) && empty($_POST["uname"]) && empty($_POST["upass"]) && empty($_POST["umail"])){
 	echo "Please enter a username. <br>";
