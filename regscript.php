@@ -24,15 +24,15 @@ session_start();
 		//		or die("Could not connect: " . mysql_error());
 		
 		echo "cant connect to db</h3>";
-		mysql_select_db("phpmyadmin", $dbLocalhost)
-				or die ("Could not find database: " . mysql_error());
+		//mysql_select_db("phpmyadmin", $dbLocalhost)
+		//		or die ("Could not find database: " . mysql_error());
 
 		$insertRec = "INSERT INTO userinfo (username, password, email) 
 			VALUES ('$_POST[uname]', '$_POST[upass]', '$_POST[umail]')";
 			
 		echo "cant insert record</h3>";	
-		mysql_query($insertRec, $dbLocalhost)
-			or die("Could not insert user: " . mysql_error());
+		mysqli_query($insertRec, $dbLocalhost)
+		//	or die("Could not insert user: " . mysql_error());
 		
 		echo "<h3>Welcome to our site, '$_POST[uname]'!</h3>";
 	}
