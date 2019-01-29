@@ -51,6 +51,7 @@ if (isset($_POST["submit"]) && !empty($_POST["unm"]) && !empty($_POST["ups"])){
 		$_SESSION['userpass'] = $userfetch[1];
 		
 		//*******************************create token to go with user session
+		*/
 		$cookie_name = "userid";
 		$cookie_value = MD5($_SESSION["username"]);
 		
@@ -59,7 +60,7 @@ if (isset($_POST["submit"]) && !empty($_POST["unm"]) && !empty($_POST["ups"])){
 		//************************************************************************
 		//$message = "You have successfully logged in. Welcome, " . $userfetch[0] . "!";
 		header("Location: frontpage.php");
-		*/
+		
 	}
 	catch(Exception $e)
     {
